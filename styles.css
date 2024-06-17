@@ -2,6 +2,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -9,8 +10,8 @@ body{
   align-items: center;
   justify-content: center;
   background-color: black;
-  height:100vh;
-  background:url(./background.jpg) center center/cover no-repeat;
+  min-height:100vh;
+  background:url(./backgroundimage.jpg) center right/cover no-repeat;
   
 }
 
@@ -18,6 +19,113 @@ body{
   border : 3px solid silver;
    padding :17px;
    border-radius: 13px;
-   width: 400px;
+   width: 350px;
    backdrop-filter:blur(8px);
+   position :relative;
+   height:370px;
+}
+
+.parent h2{
+  position:absolute;
+  top:0px;
+  left : 50%;
+  transform: translateX(-50%);
+  padding : 8px 15px;
+  background-color: silver;
+  border-radius: 0 0 8px 8px;
+
+}
+
+form{
+  
+  margin-top : 60px;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+
+}
+
+.inputBox input, .passwordBox input{
+  padding :10px;
+  width:100%;
+  outline:none;
+  border : 3px solid silver;
+  background-color: transparent;
+  border-radius: 18px;
+  color:white;
+  font-size: 18px;
+}
+
+.inputBox ,.passwordBox{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  left: 12px;
+  color:white;
+  transition: 0.15s ease-in-out;
+}
+
+span{
+  position: absolute;
+  right : 12px;
+  font-size: 13px;
+
+}
+
+.checkBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:white;
+  gap:5px;
+}
+
+a{
+  color: white;
+}
+
+.Remember{
+  display: flex;
+  align-items: center;
+  gap:4px;
+}
+
+input[type="submit"]{
+  width: 100%;
+  border:none;
+  font-size: 17px;
+  padding : 9px;
+  cursor: pointer;
+  border-radius: 18px;
+  font-weight: bolder;
+  background-color: silver;
+}
+
+
+
+input:valid+label,
+input:focus+label{
+
+ 
+  background-color: silver;
+  padding:4px 2px;
+  font-size: 15px;
+  transform: translate(25px,-25px); 
+  color:black;
+  border-radius: 3px;
+
+}
+
+.checkBox a{
+  text-decoration: none;
+}
+
+.SignUpBox{
+  text-align: center;
+  color :white;
+
 }
